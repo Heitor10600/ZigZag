@@ -138,25 +138,40 @@ table {
   background-color: #b450f5;
   width: 100%;
   height: auto;
+  display: flex;
 }
 
 .nav_header {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  vertical-align:super;
 }
 
 .ul_header {
   display: inline-flex;
 }
 
+.ul_header a{
+  text-decoration: none;
+}
+
 .ul_header li {
+  text-decoration: none;
   margin: auto 2rem;
 }
 
-.button_cadastro {
+.ul_header p{
+  color: white;
+}
+
+.button_cadastro p {
   padding: 1rem;
   border-radius: 20px;
   background-color: #f5e9dc;
   font-size: 1.5rem;
+  text-decoration: none;
+  color: #b450f5;
 }
+

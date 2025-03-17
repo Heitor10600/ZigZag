@@ -84,7 +84,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -103,8 +102,13 @@ section {
   display: block;
 }
 
+* {
+  font-family: "Iansui", cursive;
+}
+
 body {
   line-height: 1;
+  background-color: #f5e9dc;
 }
 
 ol,
@@ -146,14 +150,14 @@ table {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  vertical-align:super;
+  vertical-align: super;
 }
 
 .ul_header {
   display: inline-flex;
 }
 
-.ul_header a{
+.ul_header a {
   text-decoration: none;
 }
 
@@ -162,7 +166,7 @@ table {
   margin: auto 2rem;
 }
 
-.ul_header p{
+.ul_header p {
   color: white;
 }
 
@@ -175,3 +179,24 @@ table {
   color: #b450f5;
 }
 
+.tit_home {
+  border: solid red;
+  color: black;
+  font-family: "Iansui", cursive;
+  font-size: 3rem;
+  width: max-content;
+  margin: 12rem auto 2rem 8rem;
+}
+
+.txt_home {
+  border: solid green;
+  display: flex;
+  color: black;
+  width: max-content;
+
+  .p {}
+}
+
+.roxo {
+  color: #b450f5;
+}

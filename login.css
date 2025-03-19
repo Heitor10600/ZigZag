@@ -3,9 +3,32 @@ body {
 }
 
 .popup {
-    display: flex;
+    background-color: #f5e9dc;
     width: 50%;
     justify-content: center;
     margin: 20rem auto;
-    background-color: #f5e9dc;
+    list-style: none;
+    justify-content: center;
+
+}
+
+.tit_log {
+    display: list-item;
+    
+    margin: auto;
+    color: #b450f5;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.txt_log {
+    display: list-item;
+    
+    margin: 3rem;
+}
+
+.input_log {
+    display: list-item;
+    
+    margin: auto;
 }

@@ -1,0 +1,11 @@
+body {
+    background-image: url(ZigZagwpp.png);
+}
+
+.popup {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: 20rem auto;
+    background-color: #f5e9dc;
+}

@@ -155,19 +155,20 @@ table {
 
 .ul_header {
   display: inline-flex;
-}
 
-.ul_header a {
-  text-decoration: none;
-}
+  a {
+    text-decoration: none;
+  }
 
-.ul_header li {
-  text-decoration: none;
-  margin: auto 2rem;
-}
+  li {
+    text-decoration: none;
+    margin: auto 2rem;
+  }
 
-.ul_header p {
-  color: white;
+  p {
+    color: white;
+  }
+
 }
 
 .button_cadastro p {
@@ -179,24 +180,29 @@ table {
   color: #b450f5;
 }
 
+.txt_home {
+  width: min-content;
+  margin: 9rem auto auto 9rem;
+}
+
 .tit_home {
-  border: solid red;
   color: black;
   font-family: "Iansui", cursive;
   font-size: 3rem;
   width: max-content;
-  margin: 12rem auto 2rem 8rem;
+  margin: auto auto auto auto;
 }
 
-.txt_home {
-  border: solid green;
-  display: flex;
-  color: black;
-  width: max-content;
-
-  .p {}
-}
 
 .roxo {
   color: #b450f5;
+}
+
+.txt_p {
+  font-size: 2rem;
+  margin: 3rem auto auto auto;
+}
+
+.button_orc {
+  background-color: #b450f5;
 }

@@ -168,7 +168,6 @@ table {
   p {
     color: white;
   }
-
 }
 
 .button_cadastro p {
@@ -193,7 +192,6 @@ table {
   margin: auto auto auto auto;
 }
 
-
 .roxo {
   color: #b450f5;
 }
@@ -217,21 +215,18 @@ table {
   text-decoration: none;
   border-radius: 5rem;
   font-size: 1.5rem;
-  padding: .6rem 3rem;
-
+  padding: 0.6rem 3rem;
 
   p {
-
     width: min-content;
     color: white;
     background-color: #b450f5;
     transition: 300ms;
   }
-
 }
 
 .button_orc:hover {
-  padding: .7rem 3.3rem;
+  padding: 0.7rem 3.3rem;
   font-size: 1.6rem;
 }
 
@@ -257,7 +252,6 @@ table {
   background-color: transparent;
   border: solid #b450f5;
   transition: all 0.3s ease;
-
 }
 
 .checkbox:focus {
@@ -269,16 +263,16 @@ table {
   right: 10px;
 }
 
-.checkbox:checked~.mainbox {
+.checkbox:checked ~ .mainbox {
   width: 50px;
 }
 
-.checkbox:checked~.mainbox .search_input {
+.checkbox:checked ~ .mainbox .search_input {
   width: 0;
   height: 0px;
 }
 
-.checkbox:checked~.mainbox .iconContainer {
+.checkbox:checked ~ .mainbox .iconContainer {
   padding-right: 8px;
 }
 
@@ -306,7 +300,8 @@ table {
   font-size: 1em;
   color: #b450f5;
   transition: all 0.3s ease;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .search_input::placeholder {

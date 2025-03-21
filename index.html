@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Iansui&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <div class="top">
         <img class="logo_header" src="desing/svg/logo.svg" width="90" height="90">
 
@@ -36,38 +38,43 @@
 
 
 <body>
+    <div class="main-content">
+        <div class="txt_home">
+            <h1 class="tit_home">A costura que vai até você!</h1>
 
-
-    <div class="txt_home">
-
-        <h1 class="tit_home">A costura que vai até você!</h1>
-
-        <div class="txt_p">
-            <p>Precisando <span class="roxo">ajustar</span>, <span class="roxo"> consertar </span> ou
-                <span class="roxo"> criar </span> uma peça nova? A <span class="roxo"> ZigZag</span>
-                conecta <span class="roxo"> você</span> a
-                costureiras locais de forma <span class="roxo"> rápida </span> e <span class="roxo">
-                    prática </span>. Faça seu <span class="roxo">pedido online </span> e receba um serviço de
-                <span class="roxo"> qualidade </span> sem
-                sair de <span class="roxo">casa </span>.<span class="roxo"></span>Costura </span> sob
-                demanda, no seu tempo e do seu jeito!
-            </p>
-        </div>
-        <div class="buttons_home">
-            <a class="button_orc" href="cadastro.php">
-                <p>Faça seu orçamento</p>
-            </a>
-            <div class="container">
-                <input checked="" class="checkbox" type="checkbox">
-                <div class="mainbox">
-                    <div class="iconContainer">
-                        <img src="desing/svg/search.svg" width="30" height="30">
+            <div class="txt_p">
+                <p>Precisando <span class="roxo">ajustar</span>, <span class="roxo"> consertar </span> ou
+                    <span class="roxo"> criar </span> uma peça nova? A <span class="roxo"> ZigZag</span>
+                    conecta <span class="roxo"> você</span> a
+                    costureiras locais de forma <span class="roxo"> rápida </span> e <span class="roxo">
+                        prática </span>. Faça seu <span class="roxo">pedido online </span> e receba um serviço de
+                    <span class="roxo"> qualidade </span> sem
+                    sair de <span class="roxo">casa </span>.<span class="roxo"></span>Costura </span> sob
+                    demanda, no seu tempo e do seu jeito!
+                </p>
+            </div>
+            <div class="buttons_home">
+                <a class="button_orc" href="cadastro.php">
+                    <p>Faça seu orçamento</p>
+                </a>
+                <div class="search-container">
+                    <div class="search-box">
+                        <img src="desing/svg/search.svg" alt="Buscar" class="search-icon">
+                        <input type="text" placeholder="Buscar costureiras próximas..." class="search-input">
                     </div>
-                    <input class="search_input" placeholder="costureiras perto de você!!!" type="text">
                 </div>
             </div>
         </div>
+        <div id="map" class="map-container"></div>
     </div>
+
+    <script>
+        var map = L.map('map').setView([-23.5505, -46.6333], 13);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    </script>
 </body>
 
 </html>

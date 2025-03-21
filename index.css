@@ -1,4 +1,6 @@
-/*Ajustes dos Padrões de Formatação */
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
 html,
 body,
 div,
@@ -87,7 +89,7 @@ video {
   vertical-align: baseline;
 }
 
-/* Redefinição da função de exibição HTML5 para navegadores mais antigos */
+/* Configuração de elementos HTML5 */
 article,
 aside,
 details,
@@ -102,6 +104,7 @@ section {
   display: block;
 }
 
+/* Configurações Globais */
 * {
   font-family: "Iansui", cursive;
 }
@@ -111,6 +114,7 @@ body {
   background-color: #f5e9dc;
 }
 
+/* Reset de Listas e Citações */
 ol,
 ul {
   list-style: none;
@@ -119,25 +123,27 @@ ul {
 blockquote,
 q {
   quotes: none;
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
+/* Reset de Tabelas */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+/* Utilitários */
 .fixFloat {
   clear: both;
 }
 
+/* ==========================================================================
+   HEADER E NAVEGAÇÃO
+   ========================================================================== */
 .top {
   background-color: #b450f5;
   width: 100%;
@@ -150,7 +156,6 @@ table {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  vertical-align: super;
 }
 
 .ul_header {
@@ -170,6 +175,7 @@ table {
   }
 }
 
+/* Botão de Cadastro no Header */
 .button_cadastro p {
   padding: 1rem;
   border-radius: 20px;
@@ -177,11 +183,15 @@ table {
   font-size: 1.5rem;
   text-decoration: none;
   color: #b450f5;
+  transition: all 0.3s ease;
 }
 
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL - HOME
+   ========================================================================== */
 .txt_home {
-  width: min-content;
-  margin: 9rem auto auto 9rem;
+  width: 45%;
+  margin: 9rem 0;
 }
 
 .tit_home {
@@ -189,7 +199,7 @@ table {
   font-family: "Iansui", cursive;
   font-size: 3rem;
   width: max-content;
-  margin: auto auto auto auto;
+  margin: auto;
 }
 
 .roxo {
@@ -201,122 +211,177 @@ table {
   margin: 3rem auto auto auto;
 }
 
+/* ==========================================================================
+   ÁREA DE BOTÕES E BUSCA
+   ========================================================================== */
 .buttons_home {
   display: flex;
   width: 100%;
-  border: solid;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
 }
 
+/* Botão de Orçamento */
 .button_orc {
   display: flex;
   width: min-content;
+  margin: 2rem auto;
   background-color: #b450f5;
   color: white;
   text-decoration: none;
   border-radius: 5rem;
   font-size: 1.5rem;
   padding: 0.6rem 3rem;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  position: relative;
 
   p {
     width: min-content;
     color: white;
-    background-color: #b450f5;
-    transition: 300ms;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(180, 80, 245, 0.3);
   }
 }
 
-.button_orc:hover {
-  padding: 0.7rem 3.3rem;
-  font-size: 1.6rem;
+/* ==========================================================================
+   CAMPO DE BUSCA COM ANIMAÇÃO
+   ========================================================================== */
+/* Animações */
+@keyframes expandSearch {
+  0% {
+    width: 24px;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    width: 320px;
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-/*------------------------------------------------------------------------------------------------------*/
-
-.container {
-  position: relative;
-  box-sizing: border-box;
-  width: fit-content;
-  margin: auto;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.mainbox {
-  box-sizing: border-box;
-  position: relative;
-  width: auto;
-  height: 50px;
+/* Container de Busca */
+.search-container {
+  margin: auto auto auto 2rem;
+}
+
+/* Caixa de Busca */
+.search-box {
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
-  justify-content: center;
-  border-radius: 160px;
   background-color: transparent;
-  border: solid #b450f5;
+  border: 3px solid #b450f5;
+  border-radius: 25px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(180, 80, 245, 0.1);
+  width: 320px;
+  max-width: 320px;
+  margin: 0 auto;
+  animation: expandSearch 0.9s ease-out forwards;
+  overflow: hidden;
   transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(180, 80, 245, 0.2);
+    transform: translateY(-1px);
+  }
 }
 
-.checkbox:focus {
+/* Ícone de Busca */
+.search-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Campo de Input */
+.search-input {
   border: none;
   outline: none;
-}
-
-.checkbox:checked {
-  right: 10px;
-}
-
-.checkbox:checked ~ .mainbox {
-  width: 50px;
-}
-
-.checkbox:checked ~ .mainbox .search_input {
-  width: 0;
-  height: 0px;
-}
-
-.checkbox:checked ~ .mainbox .iconContainer {
-  padding-right: 8px;
-}
-
-.checkbox {
-  box-sizing: border-box;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 17px;
-  top: 10px;
-  z-index: 9;
-  cursor: pointer;
-  appearance: none;
-}
-
-.search_input {
-  box-sizing: border-box;
-  height: max-content;
-  width: 170px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding-bottom: 4px;
-  padding-left: 1px;
-  font-size: 1em;
+  width: 100%;
+  font-size: 16px;
+  padding: 8px 5px;
+  background: transparent;
+  animation: fadeIn 0.7s ease-out 0.7s forwards;
+  opacity: 0;
   color: #b450f5;
-  transition: all 0.3s ease;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  &::placeholder {
+    color: rgba(180, 80, 245, 0.7);
+    white-space: nowrap;
+    transition: color 0.3s ease;
+  }
+
+  &:focus::placeholder {
+    color: rgba(180, 80, 245, 0.4);
+  }
 }
 
-.search_input::placeholder {
-  color: #b450f5;
+/* ==========================================================================
+   LAYOUT PRINCIPAL
+   ========================================================================== */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.iconContainer {
-  box-sizing: border-box;
-  padding-top: 5px;
-  width: fit-content;
+/* Container do Mapa */
+.map-container {
+  width: 45%;
+  height: 600px;
+  margin: 9rem 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(180, 80, 245, 0.2);
+  border: 3px solid #b450f5;
   transition: all 0.3s ease;
 }
 
-.search_icon {
-  box-sizing: border-box;
-  fill: white;
-  font-size: 1.3em;
+.map-container:hover {
+  box-shadow: 0 6px 25px rgba(180, 80, 245, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .txt_home,
+  .map-container {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .map-container {
+    height: 400px;
+  }
 }

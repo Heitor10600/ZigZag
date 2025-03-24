@@ -123,6 +123,7 @@ ul {
 blockquote,
 q {
   quotes: none;
+
   &:before,
   &:after {
     content: "";
@@ -142,8 +143,8 @@ table {
 }
 
 /* ==========================================================================
-   HEADER E NAVEGAÇÃO
-   ========================================================================== */
+      HEADER E NAVEGAÇÃO
+      ========================================================================== */
 .top {
   background-color: #b450f5;
   width: 100%;
@@ -187,8 +188,8 @@ table {
 }
 
 /* ==========================================================================
-   CONTEÚDO PRINCIPAL - HOME
-   ========================================================================== */
+      CONTEÚDO PRINCIPAL - HOME
+      ========================================================================== */
 .txt_home {
   width: 45%;
   margin: 9rem 0;
@@ -212,8 +213,8 @@ table {
 }
 
 /* ==========================================================================
-   ÁREA DE BOTÕES E BUSCA
-   ========================================================================== */
+      ÁREA DE BOTÕES E BUSCA
+      ========================================================================== */
 .buttons_home {
   display: flex;
   width: 100%;
@@ -250,8 +251,8 @@ table {
 }
 
 /* ==========================================================================
-   CAMPO DE BUSCA COM ANIMAÇÃO
-   ========================================================================== */
+      CAMPO DE BUSCA COM ANIMAÇÃO
+      ========================================================================== */
 /* Animações */
 @keyframes expandSearch {
   0% {
@@ -259,6 +260,7 @@ table {
     opacity: 0;
     transform: scale(0.8);
   }
+
   100% {
     width: 320px;
     opacity: 1;
@@ -271,6 +273,7 @@ table {
     opacity: 0;
     transform: translateX(-20px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -340,8 +343,8 @@ table {
 }
 
 /* ==========================================================================
-   LAYOUT PRINCIPAL
-   ========================================================================== */
+      LAYOUT PRINCIPAL
+      ========================================================================== */
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -354,8 +357,8 @@ table {
 /* Container do Mapa */
 .map-container {
   width: 45%;
-  height: 600px;
-  margin: 9rem 0;
+  height: 500px;
+  margin: 8rem 0;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(180, 80, 245, 0.2);
@@ -368,13 +371,249 @@ table {
   transform: translateY(-5px);
 }
 
+
+/* Seção Sobre Nós */
+.sobre-nos {
+  padding: 80px 0;
+  background-color: #b450f5;
+}
+
+.sobre-nos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sobre-nos h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+.sobre-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.sobre-texto p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: white;
+}
+
+.sobre-texto ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sobre-texto ul li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.sobre-texto ul li:before {
+  content: "•";
+  color: #8A2BE2;
+  position: absolute;
+  left: 0;
+}
+
+.sobre-imagem {
+  flex: 1;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção Como Funciona */
+.como-funciona {
+  padding: 80px 0;
+  background-color: #f5e9dc;
+}
+
+.como-funciona .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.como-funciona h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+.passos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.passo {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.passo:hover {
+  transform: translateY(-5px);
+}
+
+.numero {
+  width: 40px;
+  height: 40px;
+  background: #8A2BE2;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-weight: bold;
+}
+
+.passo h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.passo p {
+  color: #666;
+  font-size: 0.9em;
+}
+
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #b450f5;
+  color: #fff;
+  padding: 60px 0 20px;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #8A2BE2;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sobre-content {
+    flex-direction: column;
+  }
+
+  .passos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .passos {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Responsividade */
 @media (max-width: 1200px) {
   .main-content {
     flex-direction: column;
     align-items: center;
   }
-
+g
   .txt_home,
   .map-container {
     width: 90%;

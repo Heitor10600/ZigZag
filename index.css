@@ -107,6 +107,7 @@ section {
 /* Configurações Globais */
 * {
   font-family: "Iansui", cursive;
+  cursor: default;
 }
 
 body {
@@ -164,6 +165,8 @@ table {
 
   a {
     text-decoration: none;
+    position: relative;
+    cursor: pointer;
   }
 
   li {
@@ -173,6 +176,22 @@ table {
 
   p {
     color: white;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #f5e9dc;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
 
@@ -185,6 +204,34 @@ table {
   text-decoration: none;
   color: #b450f5;
   transition: all 0.3s ease;
+  transform-origin: center;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(180, 80, 245, 0.3);
+  }
+}
+
+/* Ajuste para evitar que o efeito de sublinhado afete o button_cadastro */
+.ul_header p::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #f5e9dc;
+  transition: width 0.3s ease;
+}
+
+.ul_header p:hover::after {
+  width: 100%;
 }
 
 /* ==========================================================================
@@ -237,6 +284,7 @@ table {
   transition: all 0.3s ease;
   transform-origin: center;
   position: relative;
+  cursor: pointer;
 
   p {
     width: min-content;
@@ -300,6 +348,7 @@ table {
   animation: expandSearch 0.9s ease-out forwards;
   overflow: hidden;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 4px 12px rgba(180, 80, 245, 0.2);
@@ -330,6 +379,7 @@ table {
   animation: fadeIn 0.7s ease-out 0.7s forwards;
   opacity: 0;
   color: #b450f5;
+  cursor: text;
 
   &::placeholder {
     color: rgba(180, 80, 245, 0.7);
@@ -349,21 +399,23 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   padding: 0 2rem;
 }
 
 /* Container do Mapa */
 .map-container {
   width: 45%;
-  height: 500px;
-  margin: 8rem 0;
+  height: 600px;
+  margin: 9rem 0;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(180, 80, 245, 0.2);
   border: 3px solid #b450f5;
   transition: all 0.3s ease;
+  position: relative;
+  cursor: default;
 }
 
 .map-container:hover {
@@ -371,17 +423,17 @@ table {
   transform: translateY(-5px);
 }
 
-
 /* Seção Sobre Nós */
 .sobre-nos {
-  padding: 80px 0;
+  width: 100%;
+  padding: 5rem 0;
   background-color: #b450f5;
 }
 
 .sobre-nos .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
 .sobre-nos h2 {
@@ -417,11 +469,12 @@ table {
   margin-bottom: 10px;
   padding-left: 25px;
   position: relative;
+  color: white;
 }
 
 .sobre-texto ul li:before {
   content: "•";
-  color: #8A2BE2;
+  color: #f5e9dc;
   position: absolute;
   left: 0;
 }
@@ -438,14 +491,15 @@ table {
 
 /* Seção Como Funciona */
 .como-funciona {
-  padding: 80px 0;
+  width: 100%;
+  padding: 5rem 0;
   background-color: #f5e9dc;
 }
 
 .como-funciona .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
 .como-funciona h2 {
@@ -465,19 +519,22 @@ table {
   text-align: center;
   padding: 20px;
   background: #fff;
+  border: 3px solid #b450f5;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(180, 80, 245, 0.3);
+  transition: all 0.3s ease;
 }
 
 .passo:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(180, 80, 245, 0.4);
+  border-width: 4px;
 }
 
 .numero {
   width: 40px;
   height: 40px;
-  background: #8A2BE2;
+  background: #b450f5;
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -497,21 +554,17 @@ table {
   font-size: 0.9em;
 }
 
-
-
-
-
 /* Footer */
 .footer {
+  width: 100%;
   background-color: #b450f5;
-  color: #fff;
-  padding: 60px 0 20px;
+  padding: 4rem 0 2rem;
 }
 
 .footer .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
 .footer-content {
@@ -550,10 +603,11 @@ table {
   color: #ccc;
   text-decoration: none;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .footer-section ul li a:hover {
-  color: #8A2BE2;
+  color: #8a2be2;
 }
 
 .social-links {
@@ -565,6 +619,7 @@ table {
   width: 24px;
   height: 24px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .social-links img:hover {
@@ -612,15 +667,22 @@ table {
   .main-content {
     flex-direction: column;
     align-items: center;
+    padding: 0 1rem;
   }
-g
+
   .txt_home,
   .map-container {
-    width: 90%;
+    width: 100%;
     margin: 2rem auto;
   }
 
   .map-container {
     height: 400px;
+  }
+
+  .sobre-nos .container,
+  .como-funciona .container,
+  .footer .container {
+    padding: 0 1rem;
   }
 }

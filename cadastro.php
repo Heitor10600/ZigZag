@@ -19,7 +19,7 @@
 
 <body>
     <form class="popup">
-        <div class="tit_log">Login</div>
+        <div class="tit_log">Cadastre-se</div>
         <div class="insc_log">
             <p class="txt_log">Email</p><br>
             <input class="input_log" type="email" name="txtEmail" placeholder="email@email.com">
@@ -27,7 +27,7 @@
             <input class="input_log" type="password" name="txtSenha" placeholder="digite sua senha">
         </div>
     <button><a>Entrar</a></button><br><br>
-    <a class="cadastro" href="cadastro.php">Não tenho conta</a>
+    <a class="cadastro" href="cadastro.php">Já tenho conta</a>
 
     </form>
 

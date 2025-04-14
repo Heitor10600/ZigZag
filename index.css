@@ -127,11 +127,9 @@ section {
 body {
   line-height: 1;
   background-color: var(--secondary);
-  background-image: radial-gradient(
-    circle at 10% 20%,
-    var(--primary-light) 0%,
-    transparent 20%
-  );
+  background-image: radial-gradient(circle at 10% 20%,
+      var(--primary-light) 0%,
+      transparent 20%);
 }
 
 /* Reset de Listas e Citações */
@@ -401,7 +399,7 @@ table {
   cursor: text;
 
   &::placeholder {
-    color: var(--primary-light);
+    color: var(--primary);
     white-space: nowrap;
     transition: color 0.3s ease;
   }
@@ -427,7 +425,7 @@ table {
 .map-container {
   width: 45%;
   height: 600px;
-  margin: 9rem 0;
+  margin: 3rem 0;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px var(--shadow);

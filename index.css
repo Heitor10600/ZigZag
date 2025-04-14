@@ -498,12 +498,14 @@ table {
 
 .sobre-imagem {
   flex: 1;
-}
 
-.sobre-imagem img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  img {
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto auto auto 6rem;
+    border: 0.5rem solid var(--secondary-dark);
+  }
 }
 
 /* Seção Como Funciona */

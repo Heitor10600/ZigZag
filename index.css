@@ -127,9 +127,11 @@ section {
 body {
   line-height: 1;
   background-color: var(--secondary);
-  background-image: radial-gradient(circle at 10% 20%,
-      var(--primary-light) 0%,
-      transparent 20%);
+  background-image: radial-gradient(
+    circle at 10% 20%,
+    var(--primary-light) 0%,
+    transparent 20%
+  );
 }
 
 /* Reset de Listas e Citações */
@@ -443,7 +445,7 @@ table {
 /* Seção Sobre Nós */
 .sobre-nos {
   width: 100%;
-  padding: 5rem 0;
+  padding: 3rem 0;
   background-color: var(--primary);
 }
 
